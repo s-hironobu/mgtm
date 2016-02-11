@@ -3,7 +3,7 @@
 
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "centos67_32_mgtm4pgxc092"
+  config.vm.box = "s-hironobu/centos67_32_mgtm4pgxc092"
   config.vm.boot_timeout = 500
 
   config.vm.define :mgtm1 do |mgtm1|
