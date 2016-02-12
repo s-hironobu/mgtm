@@ -2,7 +2,7 @@
 
 This is a multi-GTM (global transaction manager) system for  [Postgres-XC](http://postgresxc.wikia.com/wiki/Postgres-XC_Wiki) version 0.9.2. It is provided as a Vagrant box.
 
-##### <b>Note:</b> The multi-GTM system I made is just a feasibility study. It can be run only with Postgres-XC version 0.9.2, on 32bit Linux.
+**Note:** The multi-GTM system I made is just an **old** feasibility study. It was made in 2011, and can be run only with Postgres-XC version 0.9.2, on 32bit Linux.
 
 
 ## Postgres-XC and multi-GTM system
