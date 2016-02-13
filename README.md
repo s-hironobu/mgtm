@@ -37,7 +37,7 @@ Run `git clone` to get this repository.
 [your-pc]# cd mgtm
 ```
 
-Issue `vagrant box add` command to install the Vagrant box from [Atlas](https://atlas.hashicorp.com/s-hironobu/boxes/centos67_32_mgtm4pgxc092).
+Run `vagrant box add` command to install the Vagrant box from [Atlas](https://atlas.hashicorp.com/s-hironobu/boxes/centos67_32_mgtm4pgxc092).
 
 ```
 [your-pc]# vagrant box add s-hironobu/centos67_32_mgtm4pgxc092
@@ -47,7 +47,7 @@ Issue `vagrant box add` command to install the Vagrant box from [Atlas](https://
 
 #### [1] Start Guest VMs
 
-Issue `vagrant up` command to start five guest VMs: mgtm1, mgtm2, mgtm3, node1, and node2.
+Run `vagrant up` command to start five guest VMs: mgtm1, mgtm2, mgtm3, node1, and node2.
 
 ```
 [your-pc]# vagrant up
@@ -118,7 +118,7 @@ I'm ready!!!
 
 #### [5] Execute pgbench
 
-Execute `pgbench` command on node1 or node2:
+Execute `pgbench` on node1 or node2:
 
 ```
 [vagrant@node1 ~]$ pgbench
@@ -151,7 +151,7 @@ Let's terminate the leader and see how the other GTMs perform failover.
 [vagrant@node1 ~]$ pgbench -T 30
 ```
 
-(2) Enter `^C` on the terminal of mgtm1 to terminate the leader process while the pgbench process is running.
+(2) Enter `Ctrl+C` on the terminal of mgtm1 to terminate the leader process while the pgbench process is running.
 
 ```
 [vagrant@mgtm1 ~]$ mgtm-start
@@ -179,7 +179,7 @@ The figure below illustrates this situation:
 
 ## Terminate GTMs and XC-nodes
 
-Stop all GTMs by entering `^C` on each terminal of mgtm,
+Stop all GTMs by entering `Ctrl+C` on each terminal of mgtm,
 and execute the `node-stop` command on the terminals of both node1 and node2.
 
 ```
