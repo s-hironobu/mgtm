@@ -12,15 +12,15 @@ It is composed of a single global transaction manager (GTM) and multiple XC node
 
 
 The multi-GTM system increases the availability of Postgres-XC by removing a SPOF.
-It is written in Java from scratch and is composed of two server programs: mgtm (GTM) and mgtm_proxy.
-
-![Figure 1: ](http://www.interdb.jp/blog/pgsql/img/mgtm-01.png)
-
-
+It is composed of two server programs: mgtm (GTM) and mgtm_proxy.
 When a multi-GTM starts up, a leader is elected from among GTMs.
 The leader sends all data received from mgtm_proxies on XC-nodes to other GTMs using *atomic multicast* protocol and hence all GTMs are always in the same state.
 If the leader crashes, a new leader is elected, and then mgtm_proxies reconnect to the new one. Therefore, Postgres-XC can run without being affected by failures of GTMs.
 
+
+![Figure 1: ](http://www.interdb.jp/blog/pgsql/img/mgtm-01.png)
+
+the mult-GTM system is written in Java from scratch.
 
 ## Requirement
 
