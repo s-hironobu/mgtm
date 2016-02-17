@@ -11,7 +11,7 @@ Postgres-XC is a multi-master database cluster system based on PostgreSQL.
 It is composed of a single global transaction manager (GTM) and multiple XC nodes, each of which contains a proxy, a coordinator, and a datanode.  Clearly, the GTM of Postgres-XC is a single point of failure (SPOF).
 
 
-The multi-GTM system increases the availability of Postgres-XC to remove a SPOF.
+The multi-GTM system increases the availability of Postgres-XC by removing a SPOF.
 It is written in Java from scratch and is composed of two server programs: mgtm (GTM) and mgtm_proxy.
 
 ![Figure 1: ](http://www.interdb.jp/blog/pgsql/img/mgtm-01.png)
