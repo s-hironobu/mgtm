@@ -18,7 +18,7 @@ The leader sends all data received from mgtm_proxies on XC-nodes to other GTMs u
 If the leader crashes, a new leader is elected, and then mgtm_proxies reconnect to the new one. Therefore, Postgres-XC can run without being affected by failures of GTMs.
 
 
-![Figure 1: ](http://www.interdb.jp/blog/pgsql/img/mgtm-01.png)
+![Figure 1: ](./img/mgtm-01.png)
 
 the mult-GTM system is written in Java from scratch.
 
@@ -59,7 +59,7 @@ Run `vagrant up` command to start five guest VMs: mgtm1, mgtm2, mgtm3, node1, an
 
 Create five terminals on your Desktop, as shown in the figure below:
 
-![Figure 2: ](http://www.interdb.jp/blog/pgsql/img/mgtm-02.png)
+![Figure 2: ](./img/mgtm-02.png)
 
 Then, access to each guest VM by using `vagrant ssh` command.
 
@@ -174,7 +174,7 @@ I'm LEADER!!!!
 
 The figure below illustrates this situation:
 
-![Figure 3: ](http://www.interdb.jp/blog/pgsql/img/mgtm-03.png)
+![Figure 3: ](./img/mgtm-03.png)
 
 
 ## Terminate GTMs and XC-nodes
@@ -219,6 +219,6 @@ Issue `vagrant halt`.
 
 The result of benchmarking with pgbench is shown in the graph below:
 
-![G2: ](http://www.interdb.jp/blog/pgsql/img/mgtm-g2.png)
+![G2: ](./img/mgtm-g2.png)
 
 "mgtm x 3" means that three GTMs run, and so on. I also did benchmarking using an original GTM (green line).
